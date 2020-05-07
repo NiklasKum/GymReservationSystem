@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gym_Activity"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <!--Main container-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="#D3D3D3"
+
+                >
+
+                <ImageView
+                    android:id="@+id/GymThumbnail"
+                    android:layout_width="300dp"
+                    android:layout_height="170dp"
+                    android:background="#2d2d2d"
+                    android:scaleType="centerCrop"
+
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="top"
+                        >
+
+                        <TextView
+                            android:id="@+id/ingym_gymName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sali: Puulattiasali"
+                            android:textColor="#2d2d2d"
+                            />
+                        <TextView
+                            android:id="@+id/ingym_hallname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Halli: Läntinen monitoimihalli"
+                            android:textColor="#2d2d2d"
+                            />
+                        <TextView
+                            android:id="@+id/ingym_gymAvail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saatavuus tänään: Vapaa"
+                            android:textColor="#2d2d2d"
+                            />
+                        <TextView
+                            android:id="@+id/ingym_gymNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sali numero: 3"
+                            android:textColor="#2d2d2d"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="top"
+                        >
+
+                        <TextView
+                            android:id="@+id/ingym_gymAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Osoite: Olio-ohjelmoinnin katu 1 E"
+                            android:textColor="#2d2d2d"
+                            />
+                        <TextView
+                            android:id="@+id/ingym_gymCap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Arvioitu kapasiteetti: 35 henkilö"
+                            android:textColor="#2d2d2d"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ingym_gymDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2d2d2d"
+                    android:text="asd"
+                    />
+
+            </LinearLayout>
+
+            <!--Info End-->
+            <!-- Time reservation-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/selectTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Reservation. Select time: 05/07/2020 07-09"
+                    />
+                <!-- Text-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day/Month/Year"/>
+                </LinearLayout>
+                <!-- Spinners -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Spinner
+                        android:id="@+id/daySpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/monthSpinner"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/yearSpinner"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/ReserveBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/cardview_light_background"
+                    android:background="#4CD5FF"
+                    android:onClick="DoReservation"
+                    android:text="Reserve" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/time1btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="07-09"
+                    />
+                <Button
+                    android:id="@+id/time2btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="09-11"
+                    />
+                <Button
+                    android:id="@+id/time3btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="11-13"
+                    />
+                <Button
+                    android:id="@+id/time4btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="13-15"
+                    />
+                <Button
+                    android:id="@+id/time5btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#04FF00"
+                    android:text="15-17"
+                    />
+                <Button
+                    android:id="@+id/time6btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0000"
+                    android:text="17-19"
+                    />
+                <Button
+                    android:id="@+id/time7btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="19-21"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <!--Copy-->
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#D3D3D3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIME RESERVATION"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
