@@ -54,7 +54,7 @@ public class CommonDatabase {
     }
 
     public void addGyms(){
-        //Called only once at MAINACTIVITY. adds all the sporthalls gyms to a list
+        //Called only once at MAINACTIVITY. adds all the sporthalls gyms to a lis
         if(Gyms.size() > 0){
             Gyms.clear();
         }
